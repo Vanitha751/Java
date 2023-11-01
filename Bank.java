@@ -1,59 +1,25 @@
-package com.xworkz.september.things;
+package com.xworkz.shopping.things;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Bank {
-	private String bankName;
-	private String location;
-	private int noOfBranches;
-	private Payment payment;
-	private Account account;
+	private String accountName;
+	private String acountHolder;
+	private String accountNumber;
+	private int totalAmmount;
 	public Bank() {
-		System.out.println("No-arguement constructor");
+		System.out.println("No-args constructor");
 	}
-
-	public Bank(String bankName, String location, int noOfBranches, Payment payment, Account account) {
-		this.bankName = bankName;
-		this.location = location;
-		this.noOfBranches = noOfBranches;
-		this.setPayment(payment);
-		this.setAccount(account);
-	}
-
-	public void setBankName(String bankName) {
-		this.bankName = bankName;
-	}
-	public void setLocation(String location) {
-		this.location = location;
-	}
-	public void setNoOfBranches(int noOfBranches) {
-		this.noOfBranches = noOfBranches;
+	public Bank(String accountName, String acountHolder, String accountNumber, int totalAmmount) {
+		this.accountName = accountName;
+		this.acountHolder = acountHolder;
+		this.accountNumber = accountNumber;
+		this.totalAmmount = totalAmmount;
+		System.out.println("all args constructor");
 	}
 	
-	public String getBankName() {
-		return bankName;
-	}
-	public String getLocation() {
-		return location;
-	}
 	
-	public int getNoOfBranches() {
-		return noOfBranches;
-	}
-
-	public Payment getPayment() {
-		return payment;
-	}
-
-	public void setPayment(Payment payment) {
-		this.payment = payment;
-	}
-
-	public Account getAccount() {
-		return account;
-	}
-
-	public void setAccount(Account account) {
-		this.account = account;
-	}
-	
-
 }
